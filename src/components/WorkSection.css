@@ -1,0 +1,98 @@
+.work-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    color: white;
+    padding: 60px;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .text-section {
+    width: 50%;
+  }
+  
+  .text-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .text-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .text-section p {
+    font-size: 1rem;
+    max-width: 500px;
+  }
+  
+  .image-section {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+  }
+  
+  .image-layer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: transform 2s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  /* Layer positioning with different rotation */
+  .layer-0 {
+    z-index: 4;
+    transform: rotate(0deg);
+  }
+  
+  .layer-1 {
+    z-index: 3;
+    transform: rotate(30deg) scale(0.95) translateY(10px);
+  }
+  
+  .layer-2 {
+    z-index: 2;
+    transform: rotate(60deg) scale(0.9) translateY(20px);
+  }
+  
+  .layer-3 {
+    z-index: 1;
+    transform: rotate(90deg) scale(0.85) translateY(30px);
+  }
+  
+  /* When clicked, the first image flies up while rotating */
+  .layer-0:active {
+    animation: flyUp 1s ease-out forwards;
+  }
+  
+  @keyframes flyUp {
+    0% {
+      transform: rotate(0deg) translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-90deg) translateY(-200px) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Pop-up effect for new top image */
+  .pop-up {
+    animation: popIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

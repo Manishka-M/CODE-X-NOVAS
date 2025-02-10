@@ -1,0 +1,75 @@
+.team-container {
+    text-align: center;
+    background-color: #000000; /* Dark gray background */
+    padding: 40px 20px;
+    color: white;
+  }
+  
+  .team-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .team-card {
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Rotational shaking effect */
+  .team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-card:hover img {
+    animation: rotateShake 0.3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes rotateShake {
+    0% {
+      transform: rotate(-2deg);
+    }
+    100% {
+      transform: rotate(2deg);
+    }
+  }
+  
+  .team-info {
+    margin-top: 10px;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+  }
+  
+  .name {
+    font-size: 1rem;
+    color: #56aaff;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    border: 2px solid purple;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
