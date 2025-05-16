@@ -126,4 +126,62 @@
       display: none;
     }
   }
+
+/* Tablet view*/
+@media (max-width: 900px) {
+  .footer-col {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-col h4::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rights-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Mobile view*/
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    text-align: center;
+  }
+
+  .rights hr {
+    width: 100%;
+    margin: 0;
+  }
+
+  .rights-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .footer-col h4::before {
+    display: none;
+  }
+}
+
   
