@@ -22,4 +22,39 @@
     max-width: 600px;
     line-height: 1.6;
   }
+
+@media (min-width: 600px) {
+  .about-container {
+    padding: 60px 40px;
+  }
+
+  .about-container h1 {
+    font-size: 3rem;
+  }
+
+  .about-container p {
+    max-width: 80%;
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 450px;
+    text-align: left;
+  }
+
+  .about-container h1 {
+    margin-right: 30px;
+    font-size: 3.5rem;
+  }
+
+  .about-container p {
+    max-width: 600px;
+    font-size: 1.2rem;
+  }
+}
   
