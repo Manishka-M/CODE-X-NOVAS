@@ -72,4 +72,31 @@
     padding: 8px;
     border-radius: 8px;
   }
+
+/* Responsive layout for team grid */
+
+/* Mobile first: 1 column */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+  gap: 30px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tablet screens: 2 columns */
+@media (min-width: 600px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop screens: 3 columns */
+@media (min-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
   
